@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# do not run it on live system
+if [ -e "/rofs" ];then
+    exit
+else
+    kernels="$(dpkg --get-selections linux-image-[0-9]*|awk '{print $1}')"
+    number_of_kernel=$(wc -l <<< $kernels)
+    if [ $number_of_kernel -gt 1 ];then
+        yad --posx="-10" --posy="-50" --undecorated --skip-taskbar \
+            --borders="5" --image="kernel-tigeros-yad" --on-top \
+            --width="400" --text="\n\t<b>O sistema possui mais de um Kernel instalado!</b>\t\n\t<b>Deseja abrir o Gerenciador de Kernel?</b>\t"
+        ret="$?"
+        if [ $ret = 0 ];then
+            kernel-tigeros &
+            exit
+        else
+            exit
+        fi
+    else
+        exit
+    fi
+fi

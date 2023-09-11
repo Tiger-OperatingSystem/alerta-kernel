@@ -1,0 +1,12 @@
+Package: system-kernel
+Version: 1.0.3
+Depends: yad, coreutils
+Architecture: all
+Maintainer: Elton Fabricio <https://gitlab.com/eltonfabricio10>
+Section: admin
+Priority: optional
+Installed-Size:36
+Description: old kernel notifier to Debian based
+Replaces:system-kernel
+Conflicts:system-kernel
+

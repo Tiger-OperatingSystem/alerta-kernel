@@ -1,0 +1,5 @@
+d41d8cd98f00b204e9800998ecf8427e  DEBIAN/md5sums
+7d6d0f90ba3f9c6407c4298cf31a471a  DEBIAN/control
+342438650a78272f2ba1f69d8ea90373  etc/xdg/autostart/system-kernel.desktop
+6be49c09fcdb12452f0ae6cdd1c4de91  usr/bin/system-kernel
+ac5d7c13c9630d859659fd3215f813f3  usr/share/pixmaps/kernel-tigeros-yad.png
